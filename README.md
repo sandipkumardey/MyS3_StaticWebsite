@@ -1,4 +1,5 @@
 # Deploy Static Website on AWS S3 with Terraform
+Test it here- http://myterraformprojectwebsite2025-unique.s3-website-us-east-1.amazonaws.com/
 
 ## Overview
 This guide shows how to deploy a simple static website on **AWS S3** using **Terraform**. The setup includes:
