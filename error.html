@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - NovaLabs</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --gray-50: #f8fafc;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-900: #0f172a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.5;
+            color: var(--gray-900);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header styles */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Error section styles */
+        .error-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-title {
+            font-size: 8rem;
+            font-weight: bold;
+            line-height: 1;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            opacity: 0.1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .error-heading {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .error-message {
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .button-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Error illustration */
+        .error-illustration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.05;
+        }
+
+        @media (max-width: 640px) {
+            .error-title {
+                font-size: 6rem;
+            }
+
+            .error-heading {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>NovaLabs</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="error-container">
+        <div class="error-content">
+            <div class="error-title">404</div>
+            <h1 class="error-heading">Page Not Found</h1>
+            <p class="error-message">Sorry, we couldn't find the page you're looking for. It might have been moved or doesn't exist.</p>
+            <a href="index.html" class="button button-primary">Back to Home</a>
+        </div>
+
+        <!-- Error page illustration -->
+        <svg class="error-illustration" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0L1200 0L1200 800L0 800L0 0Z" fill="url(#grid_pattern)"/>
+            <defs>
+                <pattern id="grid_pattern" patternUnits="userSpaceOnUse" width="50" height="50">
+                    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="currentColor" stroke-width="1"/>
+                </pattern>
+                <linearGradient id="fade_gradient" x1="600" y1="0" x2="600" y2="800" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#2563eb" stop-opacity="0.1"/>
+                    <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+            
+            <!-- Abstract shapes -->
+            <circle cx="200" cy="200" r="100" fill="currentColor" opacity="0.1"/>
+            <circle cx="1000" cy="600" r="150" fill="currentColor" opacity="0.1"/>
+            <path d="M600 100 L800 300 L400 300 Z" fill="currentColor" opacity="0.1"/>
+        </svg>
+    </main>
+</body>
+</html>
